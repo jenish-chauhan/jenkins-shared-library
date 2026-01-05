@@ -1,13 +1,12 @@
-def call(Map config = [:]) {
+def call(String url , String branch) {
 
-    def repoUrl = config.repoUrl ?: error("repoUrl is required")
-    def branch  = config.branch ?: 'main'
+  
 
-    echo "Cloning repository: ${repoUrl}"
+    echo "Cloning repository: ${url}"
     echo "Branch: ${branch}"
 
     git(
-        url: repoUrl,
+        url: url,
         branch: branch,
         changelog: false,
         poll: false
