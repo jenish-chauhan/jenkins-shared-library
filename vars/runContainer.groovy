@@ -1,4 +1,4 @@
-def call(String imageName, String containerName, String portMapping = "8000:8000") {
+def call(String imageName, String containerName, String portMapping ) {
 
     sh """
     docker stop ${containerName} || true
