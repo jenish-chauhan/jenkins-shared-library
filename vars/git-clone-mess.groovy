@@ -1,1 +1,14 @@
-git branch: 'main', changelog: false, poll: false, url: 'https://github.com/jenish-chauhan/FOOD_mess_app.git'
+def call(String url , String branch) {
+
+  
+
+    echo "Cloning repository: ${url}"
+    echo "Branch: ${branch}"
+
+    git(
+        url: url,
+        branch: branch,
+        changelog: false,
+        poll: false
+    )
+}
